@@ -1,7 +1,6 @@
 .imgBottom {
   position: relative;
 }
-
 .imgBottom::before {
   content: "";
   position: absolute;
