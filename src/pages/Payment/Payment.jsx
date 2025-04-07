@@ -3,7 +3,7 @@ import styles from "./Payment.module.css";
 import { DataContext } from "../../Components/DataProvider/DataProvider";
 import ProductCard from "../../Components/Product/ProductCard";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
-import CurrencyFormat from "../../Components/CurrencyFormater/CurrencyFormater";
+import CurrencyFormater from "../../Components/CurrencyFormater/CurrencyFormater";
 import { axiosInstance } from "../../Api/axios";
 import ClipLoader from "react-spinners/ClipLoader";
 import { db } from "../../Utility/firebase";
@@ -110,7 +110,7 @@ const Payment = () => {
                 <div className={styles.payment_price}>
                   <div>
                     <span style={{ display: "flex", gap: "10px" }}>
-                      <p>Total Order</p> | <CurrencyFormat amount={total} />
+                      <p>Total Order</p> | <CurrencyFormater amount={total} />
                     </span>
                   </div>
                   <button type="submit">
